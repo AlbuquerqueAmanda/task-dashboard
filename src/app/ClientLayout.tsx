@@ -3,11 +3,9 @@
 import { useState } from 'react';
 import Sidebar from '@/components/Sidebar';
 import { TaskProvider } from '@/context/TaskContext';
-import { usePathname } from 'next/navigation';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <TaskProvider>
